@@ -1,0 +1,105 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    color: #eee;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 20px; /* Espacio entre el logo y el título */
+    color: #ddd;
+}
+
+ul {
+    list-style-type: none;
+    padding: 3%;
+    margin: 0;
+}
+
+ul li {
+    background-color: #333;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+ul li ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+ul li ul li {
+    margin-top: 5px;
+}
+
+ul li ul li:before {
+    content: '-';
+    margin-right: 5px;
+}
+
+.json-container {
+    background-color: #444;
+    color: #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    h1 {
+        margin-left: 0; /* Eliminar el espacio entre el logo y el título en dispositivos móviles */
+        font-size: 24px; /* Tamaño del título para dispositivos móviles */
+    }
+}
+
+/* Estilos del logo */
+.logo-container {
+    position: fixed; /* Fija el logo en la parte superior izquierda */
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(0, 0, 0, 0); /* Fondo semi-transparente */
+    z-index: 999; /* Para asegurar que esté por encima de otros elementos */
+    display: flex;
+    justify-content: center; /* Alinea el contenido horizontalmente */
+    align-items: center; /* Alinea el contenido verticalmente */
+}
+
+.logo {
+    max-width: 100px;
+    padding: 10px;
+    opacity: 1; /* Opacidad del logo */
+    animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+#btnPDF,
+#btnActualizar {
+  padding: 1%;
+  background-size: contain;
+  width: 25px; 
+  height: 25px;
+  border: none;
+  cursor: pointer;
+}
+#btnPDF {
+  background-image: url("/static/img/print.png");
+}
+
+#btnActualizar {
+  background-image: url("/static/img/reload.png");
+}
+
+.fixed-bottom {
+    position: fixed;
+    bottom: 10px; /* Ajusta la distancia desde la parte inferior */
+    right: 10px; /* O ajusta a la izquierda con 'left: 10px;' según prefieras */
+    z-index: 999; /* Ajusta el z-index según sea necesario */
+}

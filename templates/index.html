@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      sizes="16x16 32x32 48x48"
+      type="image/png"
+      href="{{ img_icon }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.2.0/socket.io.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    <title>Visor JSON - Tecsidel</title>
+
+  </head>
+  <body>
+    <div class="logo-container">
+      <img src="{{ img_logo }}" alt="Logo" class="logo" />
+    </div>
+
+    <h1>Mensajes JSON recibidos</h1>
+
+    <div class="fixed-bottom">
+        <button id="btnPDF" onclick="generarPDF()"></button>
+        <button id="btnActualizar" onclick="actualizarPantalla()"></button>
+    </div>
+
+
+    <script>
+      function generarPDF() {
+        window.print();
+      }
+      function actualizarPantalla() {
+        location.reload(); // Recarga la página actual
+      }
+    </script>
+
+    <ul id="mensajes-list">
+      <!-- Aquí se agregarán dinámicamente los mensajes -->
+    </ul>
+  </body>
+</html>
